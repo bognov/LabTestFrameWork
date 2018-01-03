@@ -1,0 +1,12 @@
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\AviagoAutomation.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\AviagoAutomation.pdb
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\nunit.framework.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\WebDriver.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\WebDriver.Support.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\nunit.framework.xml
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\WebDriver.xml
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\WebDriver.Support.xml
+E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.csprojResolveAssemblyReference.cache
+E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.csproj.CoreCompileInputs.cache
+E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.dll
+E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.pdb
