@@ -42,8 +42,9 @@ namespace GitHubAutomation
         {
             steps.OpenPage();
             steps.SetTypeDates("8.1.2018", "", "oneway");
-            steps.SetCityes("Минск, Беларусь", "");
+            steps.SetCityes("Минск, Беларусь", " ");
             steps.Submit();
+            Assert.IsTrue(steps.GetErrorCity1("Введите название горда или аэропорта"));
         }
 
         [Test]
@@ -60,8 +61,9 @@ namespace GitHubAutomation
         {
             steps.OpenPage();
             steps.SetTypeDates("1.2.2018", "", "oneway");
-            steps.SetCityes("Минск, Беларусь", "Полоцк");
+            steps.SetCityes("Полоцк", "Минск, Беларусь");
             steps.Submit();
+            Assert.IsTrue(steps.GetErrorCity0("Такое название города или аэропорта не найдено"));
         }
 
         [Test]
@@ -94,6 +96,28 @@ namespace GitHubAutomation
             steps.SetCityes("Минск, Беларусь", "Лос-Анджелес, США, International");
             steps.Submit();
             steps.SelSort("fast");
+        }
+
+        [Test]
+        public void Test9()
+        {
+            steps.OpenPage();
+            steps.SetTypeDates("1.2.2018", "28.2.2018", "round");
+            steps.SetCityes("Минск, Беларусь", "Лос-Анджелес, США, International");
+            steps.DecreasePass();
+            steps.Submit();
+            Assert.IsTrue(steps.GetErrorAdult("Укажите число пассажиров"));
+        }
+
+        [Test]
+        public void Test10()
+        {
+            steps.OpenPage();
+            steps.SetTypeDates("1.2.2018", "28.2.2018", "round");
+            steps.SetCityes("Минск, Беларусь", " ");
+            steps.DecreasePass();
+            steps.Submit();
+            Assert.IsTrue(steps.GetErrorAdult("Укажите число пассажиров") && steps.GetErrorCity1("Введите название горда или аэропорта"));
         }
     }
 }

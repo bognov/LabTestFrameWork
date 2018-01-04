@@ -48,6 +48,9 @@ namespace GitHubAutomation.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id=\"pax\"]/div[1]/div[2]/span/a[1]")]
         private IWebElement AdultsNum;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"pax\"]/div[1]/div[2]/span/a[2]")]
+        private IWebElement AdultsDec;
+
         [FindsBy(How = How.XPath, Using = "//*[@id=\"pax\"]/div[2]/div[2]/span/a[1]")]
         private IWebElement ChildrenNum;
 
@@ -83,6 +86,11 @@ namespace GitHubAutomation.Pages
                 case 1: AdultsNum.Click(); break;
                 case 2: ChildrenNum.Click(); break;
             }
+        }
+
+        public void DecreacePass(int pass)
+        {
+            AdultsDec.Click();
         }
 
         public void SetTripType(string TypeTrip)
@@ -132,6 +140,45 @@ namespace GitHubAutomation.Pages
         {
             TextFrom2.SendKeys(from);
             TextTo2.SendKeys(to);
+        }
+
+        public bool GetCity0Error(string error)
+        {
+            try
+            {
+                var errorCity0 = driver.FindElement(By.XPath("//*[@id=\"cty0-error\"]"));
+                return errorCity0.Text == error;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+
+        public bool GetCity1Error(string error)
+        {
+            try
+            {
+                var errorCity1 = driver.FindElement(By.XPath("//*[@id=\"cty1-error\"]"));
+                return errorCity1.Text == error;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+
+        public bool GetAdultsError(string error)
+        {
+            try
+            {
+                var errorPass = driver.FindElement(By.XPath("//*[@id=\"adults - error\"]"));
+                return errorPass.Text == error;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
         }
     }
 }

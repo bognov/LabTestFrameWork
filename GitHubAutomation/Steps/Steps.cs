@@ -64,6 +64,11 @@ namespace GitHubAutomation.Steps
             }
         }
 
+        public void DecreasePass()
+        {
+            Pages.MainPage mainPage = new Pages.MainPage(driver);
+        }
+
         public void Submit()
         {
             Pages.MainPage mainPage = new Pages.MainPage(driver);
@@ -81,6 +86,24 @@ namespace GitHubAutomation.Steps
             Pages.ResultPage resultPage = new Pages.ResultPage(driver);
             resultPage.SelectFirst();
             resultPage.SubmitChoice();
+        }
+
+        public bool GetErrorCity0(string errorMessage)
+        {
+            Pages.MainPage mainPage = new Pages.MainPage(driver);
+            return mainPage.GetCity0Error(errorMessage);
+        }
+
+        public bool GetErrorCity1(string errorMessage)
+        {
+            Pages.MainPage mainPage = new Pages.MainPage(driver);
+            return mainPage.GetCity1Error(errorMessage);
+        }
+
+        public bool GetErrorAdult(string errorMessage)
+        {
+            Pages.MainPage mainPage = new Pages.MainPage(driver);
+            return mainPage.GetAdultsError(errorMessage);
         }
     }
 }
