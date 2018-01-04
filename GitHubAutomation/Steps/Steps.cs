@@ -22,7 +22,7 @@ namespace GitHubAutomation.Steps
             mainPage.OpenPage();
         }
 
-        public void SetTypeDates(string from, string to, string type = "round", bool bis = false)
+        public void SetTypeDates(string type = "round", bool bis = false)
         {
             Pages.MainPage mainPage = new Pages.MainPage(driver);
             if(bis == true)
@@ -30,10 +30,10 @@ namespace GitHubAutomation.Steps
             mainPage.SetTripType(type);
             if (type == "oneway")
             {
-                mainPage.SetDateOne(from);
+                mainPage.SetDateOne();
             }
             else
-                mainPage.SetDate(from, to);
+                mainPage.SetDate();
         }
 
         public void SetCityes(string from, string to)

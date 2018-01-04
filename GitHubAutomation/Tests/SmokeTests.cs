@@ -23,7 +23,7 @@ namespace GitHubAutomation
         public void Test1()
         {
             steps.OpenPage();
-            steps.SetTypeDates("8.1.2018", "", "oneway");
+            steps.SetTypeDates("oneway");
             steps.SetCityes("Минск, Беларусь", "Париж, Франция");
             steps.Submit();
         }
@@ -32,7 +32,7 @@ namespace GitHubAutomation
         public void Test2()
         {
             steps.OpenPage();
-            steps.SetTypeDates("9.1.2018", "8.2.2018", "round", true);
+            steps.SetTypeDates("round", true);
             steps.SetCityes("Москва, Россия, Sheremetyevo", "Тель-Авив, Израиль");
             steps.Submit();
         }
@@ -41,7 +41,7 @@ namespace GitHubAutomation
         public void Test3()
         {
             steps.OpenPage();
-            steps.SetTypeDates("8.1.2018", "", "oneway");
+            steps.SetTypeDates("oneway");
             steps.SetCityes("Минск, Беларусь", " ");
             steps.Submit();
             Assert.IsTrue(steps.GetErrorCity1("Введите название горда или аэропорта"));
@@ -51,7 +51,7 @@ namespace GitHubAutomation
         public void Test4()
         {
             steps.OpenPage();
-            steps.SetTypeDates("1.2.2018", "15.3.2018", "multi");
+            steps.SetTypeDates("multi");
             steps.SetCityesMulti("Минск, Беларусь", "Алматы, Казахстан", "Астана, Казахстан", "Вильнюс, Литва");
             steps.Submit();
         }
@@ -60,7 +60,7 @@ namespace GitHubAutomation
         public void Test5()
         {
             steps.OpenPage();
-            steps.SetTypeDates("1.2.2018", "", "oneway");
+            steps.SetTypeDates("oneway");
             steps.SetCityes("Полоцк", "Минск, Беларусь");
             steps.Submit();
             Assert.IsTrue(steps.GetErrorCity0("Такое название города или аэропорта не найдено"));
@@ -70,7 +70,7 @@ namespace GitHubAutomation
         public void Test6()
         {
             steps.OpenPage();
-            steps.SetTypeDates("8.1.2018", "", "oneway", true);
+            steps.SetTypeDates("oneway", true);
             steps.SetCityes("Берлин, Германия, все аэропорты", "Москва, Россия, все аэропорты");
             steps.SetPass(4, 1);
             steps.SetPass(1, 2);
@@ -82,7 +82,7 @@ namespace GitHubAutomation
         public void Test7()
         {
             steps.OpenPage();
-            steps.SetTypeDates("8.1.2018", "15.2.2018", "round");
+            steps.SetTypeDates("round");
             steps.SetAirline();
             steps.SetCityes("Минск, Беларусь", "Анкара, Турция, Esenboga");
             steps.Submit();
@@ -92,7 +92,7 @@ namespace GitHubAutomation
         public void Test8()
         {
             steps.OpenPage();
-            steps.SetTypeDates("1.2.2018", "28.2.2018", "round");
+            steps.SetTypeDates("round");
             steps.SetCityes("Минск, Беларусь", "Лос-Анджелес, США, International");
             steps.Submit();
             steps.SelSort("fast");
@@ -102,7 +102,7 @@ namespace GitHubAutomation
         public void Test9()
         {
             steps.OpenPage();
-            steps.SetTypeDates("1.2.2018", "28.2.2018", "round");
+            steps.SetTypeDates("round");
             steps.SetCityes("Минск, Беларусь", "Лос-Анджелес, США, International");
             steps.DecreasePass();
             steps.Submit();
@@ -113,7 +113,7 @@ namespace GitHubAutomation
         public void Test10()
         {
             steps.OpenPage();
-            steps.SetTypeDates("1.2.2018", "28.2.2018", "round");
+            steps.SetTypeDates("round");
             steps.SetCityes("Минск, Беларусь", " ");
             steps.DecreasePass();
             steps.Submit();

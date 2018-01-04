@@ -10,3 +10,10 @@ E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.csprojResolveAs
 E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.csproj.CoreCompileInputs.cache
 E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.dll
 E:\study\Test\dotnet\GitHubAutomation\obj\Debug\AviagoAutomation.pdb
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\nunit.engine.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\nunit.engine.api.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\Mono.Cecil.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\Mono.Cecil.Pdb.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\Mono.Cecil.Mdb.dll
+E:\study\Test\dotnet\GitHubAutomation\bin\Debug\Mono.Cecil.Rocks.dll

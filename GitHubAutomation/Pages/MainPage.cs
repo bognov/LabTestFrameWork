@@ -39,6 +39,12 @@ namespace GitHubAutomation.Pages
         [FindsBy(How = How.Id, Using = "retDate")]
         private IWebElement DateRet1;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"outCalHolderD\"]/div/div[1]/table/tbody/tr[3]/td[3]")]
+        private IWebElement DateOut1Fill;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"retCalHolderD\"]/div/div[2]/table/tbody/tr[2]/td[2]")]
+        private IWebElement DateRet1Fill;
+
         [FindsBy(How = How.Id, Using = "cabin2")]
         private IWebElement BisnesOnly;
 
@@ -103,15 +109,18 @@ namespace GitHubAutomation.Pages
             }
         }
 
-        public void SetDateOne(string date)
+        public void SetDateOne()
         {
-            DateOut1.SendKeys(date);
+            DateOut1.Click();
+            DateOut1Fill.Click();
         }
 
-        public void SetDate(string date1, string date2)
+        public void SetDate()
         {
-            DateOut1.SendKeys(date1);
-            DateRet1.SendKeys(date2);
+            DateOut1.Click();
+            DateOut1Fill.Click();
+            DateRet1.Click();
+            DateRet1Fill.Click();
         }
 
         public void StartSearch()
